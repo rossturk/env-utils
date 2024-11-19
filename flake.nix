@@ -19,8 +19,8 @@
             ];
           }
           ''
-            mkdir -p $out/share/
-            substitute ${./env-utils.sh} $out/share/env-utils.sh \
+            mkdir -p $out/share/env-utils
+            substitute ${./env-utils.sh} $out/share/env-utils/env-utils.sh \
               --subst-var-by gum ${pkgs.gum}/bin/gum \
           '';
     in
