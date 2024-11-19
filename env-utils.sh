@@ -1,7 +1,7 @@
 _gum=${_gum:-@gum@}
 _gum=${_gum//@/}
 
-fxspin {
+fxspin() {
     local title=$1
     shift
     local command=("$@")
@@ -10,7 +10,7 @@ fxspin {
     $_gum spin --spinner dot --title "$title" -- "$command"
 }
 
-fxbox {
-    gum style --border double --margin "1 2" --padding "1 4" $@
+fxbox() {
+    $_gum style --border double --margin "1 2" --padding "1 4" $@
 }
 
