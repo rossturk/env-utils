@@ -11,6 +11,7 @@ fxspin() {
 }
 
 fxbox() {
-    $_gum style --border double --margin "1 2" --padding "1 4" $@
+	local args="$@"
+	$_gum style --border double --margin "1 2" --padding "1 4" "$args"
 }
 
