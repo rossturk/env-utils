@@ -10,17 +10,17 @@ fxspin() {
 	local title=$1
 	shift
 
-	 if [[ "$FLOX_ENVS_TESTING" == "1" ]]; then
+	if [[ "$FLOX_ENVS_TESTING" == "1" ]]; then
 		bash -c "$1"
 	else
 		echo
-		gum spin \
+		$_gum spin \
 		  --show-error \
 		  --spinner line \
 		  --spinner.foreground="#cccccc" \
 		  --title ">>> $title ..." \
 		  --title.foreground="#cccccc" \
-		    -- bash -c "$@"
+		    -- bash -c "$1"
 		echo -en "\033[2A\033[K"
 	fi
 }
